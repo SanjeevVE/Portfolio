@@ -83,7 +83,7 @@ const ContactForm = () => {
           type="text"
           name="linkedin"
           className="form-control"
-          placeholder="Your LinkedIn ID (Optional)"
+          placeholder="Your LinkedIn ID"
           value={formData.linkedin}
           onChange={handleChange}
         />
