@@ -12,11 +12,12 @@ import {
   FaBootstrap,
   FaJs,
   FaNodeJs,
-  FaGit,
+  FaGitAlt,
   FaGithub,
   FaDatabase,
   FaTwitter,
   FaInstagram,
+  FaAws,
 } from 'react-icons/fa';
 import {
   SiTailwindcss,
@@ -25,6 +26,7 @@ import {
   SiSequelize,
   SiFlutter,
   SiLeetcode,
+  SiFirebase,
 } from 'react-icons/si';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -41,24 +43,22 @@ const homePageImages = [
 ];
 
 const skills = [
-  { name: 'React.js', icon: <FaReact className="text-info" /> },
-  { name: 'FlutterFlow', icon: <SiFlutter className="text-cyan-400" /> },
   { name: 'HTML 5', icon: <FaHtml5 className="text-danger" /> },
   { name: 'CSS 3', icon: <FaCss3Alt className="text-primary" /> },
   { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-400" /> },
   { name: 'Bootstrap', icon: <FaBootstrap className="text-purple-500" /> },
   { name: 'JavaScript', icon: <FaJs className="text-warning" /> },
+  { name: 'React.js', icon: <FaReact className="text-info" /> },
+  { name: 'FlutterFlow', icon: <SiFlutter className="text-cyan-400" /> },
   { name: 'Node.js', icon: <FaNodeJs className="text-green-500" /> },
   { name: 'Express.js', icon: <SiExpress className="text-gray-500" /> },
-  { name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-500" /> },
-  { name: 'Sequelize (ORM)', icon: <SiSequelize className="text-blue-300" /> },
-  { name: 'Git', icon: <FaGit className="text-danger" /> },
-  { name: 'GitHub', icon: <FaGithub className="text-dark" /> },
   { name: 'RESTful APIs', icon: <FaDatabase className="text-success" /> },
-  {
-    name: 'Postman (API Testing)',
-    icon: <FaDatabase className="text-warning" />,
-  },
+  { name: 'Sequelize (ORM)', icon: <SiSequelize className="text-blue-300" /> },
+  { name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-500" /> },
+  { name: 'Git', icon: <FaGitAlt className="text-danger" /> },
+  { name: 'GitHub', icon: <FaGithub className="text-white text-3xl" /> },
+  { name: 'AWS', icon: <FaAws className="text-orange-500" /> },
+  { name: 'Firebase', icon: <SiFirebase className="text-yellow-500" /> },
 ];
 
 const projects = [
