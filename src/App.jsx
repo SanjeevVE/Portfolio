@@ -27,6 +27,8 @@ import {
   SiFlutter,
   SiLeetcode,
   SiFirebase,
+  SiTypescript,
+  SiNextdotjs,
 } from 'react-icons/si';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -48,7 +50,9 @@ const skills = [
   { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-400" /> },
   { name: 'Bootstrap', icon: <FaBootstrap className="text-purple-500" /> },
   { name: 'JavaScript', icon: <FaJs className="text-warning" /> },
+  { name: 'TypeScript', icon: <SiTypescript className="text-blue-400" /> },
   { name: 'React.js', icon: <FaReact className="text-info" /> },
+  { name: 'Next.js', icon: <SiNextdotjs className="text-white" /> },
   { name: 'FlutterFlow', icon: <SiFlutter className="text-cyan-400" /> },
   { name: 'Node.js', icon: <FaNodeJs className="text-green-500" /> },
   { name: 'Express.js', icon: <SiExpress className="text-gray-500" /> },
@@ -79,7 +83,7 @@ const projects = [
       'https://i.ibb.co/gMpbhZCX/Task2.jpg',
     ],
     link: 'https://github.com/SanjeevVE/Task-Todo',
-    demo: 'https://new-task-todo.netlify.app/',
+    demo: 'https://new-task-todo.netlify.app/'
   },
   {
     name: 'Communication Suite',
@@ -96,13 +100,13 @@ const projects = [
       'https://i.ibb.co/p6cxVmM0/Communication1.jpg',
       'https://i.ibb.co/d0H7MvNy/Communication2.jpg',
       'https://i.ibb.co/5hccwYBQ/Communication3.jpg',
-    ],
+    ]
   },
   {
     name: 'Certificate Generator',
     description:
       'An online tool that allows institutions and organizations to generate professional-looking certificates dynamically with personalized details.',
-    technologies: 'React, Tailwind CSS, Canvas API',
+    technologies: 'React, Tailwind CSS',
     features: [
       'Custom certificate templates',
       'Dynamic name & course insertion',
@@ -115,7 +119,7 @@ const projects = [
       'https://i.ibb.co/35XXw6W3/Certificate3.jpg',
     ],
     link: 'https://github.com/SanjeevVE/Fast-Certify',
-    demo: 'https://fast-certify.netlify.app/',
+    demo: 'https://fast-certify.netlify.app/'
   },
 ];
 
@@ -145,18 +149,24 @@ const Portfolio = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
-          <img
-            src="/SanjeevProfile.jpg"
-            alt="Sanjeev V E"
-            className="shadow-lg"
-            style={{
-              width: '200px',
-              height: '200px',
-              objectFit: 'cover',
-              borderRadius: '50%',
-              border: '4px solid #14ace5',
-            }}
-          />
+          <div style={{
+            width: '200px',
+            height: '200px',
+            borderRadius: '20%',
+            border: '4px solid #14ace5',
+            overflow: 'hidden',
+            boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)'
+          }}>
+            <img
+              src="/LinkedInProfile1.png"
+              alt="Sanjeev V E"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+              }}
+            />
+          </div>
 
           <motion.h1
             className="display-2 fw-bold text-light"
@@ -213,11 +223,23 @@ const Portfolio = () => {
         <Carousel fade interval={2000} className="mb-5 shadow-lg rounded">
           {homePageImages.map((image, index) => (
             <Carousel.Item key={index}>
-              <img
-                src={image}
-                className="d-block w-100 rounded"
-                alt={`Homepage image ${index + 1}`}
-              />
+              <div style={{ 
+                height: '500px', 
+                width: '100%', 
+                overflow: 'hidden',
+                borderRadius: '8px'
+              }}>
+                <img
+                  src={image}
+                  className="d-block w-100"
+                  alt={`Homepage image ${index + 1}`}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                  }}
+                />
+              </div>
             </Carousel.Item>
           ))}
         </Carousel>
@@ -228,7 +250,7 @@ const Portfolio = () => {
 
       <section
         id="skills"
-        className="text-center py-5"
+        className="text-center py-5 w-100"
         style={{
           backgroundColor: '#0f172a',
           color: '#ffffff',
@@ -257,7 +279,7 @@ const Portfolio = () => {
 
       <section
         id="projects"
-        className="py-5"
+        className="py-5 w-100"
         style={{
           background: 'linear-gradient(135deg, #0a192f, #122c51)',
           color: '#ffffff',
@@ -278,7 +300,7 @@ const Portfolio = () => {
         <div className="container">
           {projects.map(
             (
-              { name, description, technologies, features, link, demo, images },
+              { name, description, technologies, features, link, demo, images, deployed },
               index
             ) => (
               <div
@@ -288,15 +310,26 @@ const Portfolio = () => {
                 }`}
               >
                 <div className="col-md-6">
-                  <div className="p-3 bg-dark rounded shadow-lg">
-                    <Carousel fade interval={1500}>
+                  <div className="p-3 bg-dark rounded shadow-lg" style={{ height: '350px' }}>
+                    <Carousel fade interval={1500} style={{ height: '100%' }}>
                       {images.map((image, idx) => (
-                        <Carousel.Item key={idx}>
-                          <img
-                            src={image}
-                            className="d-block w-100 rounded"
-                            alt={`${name} screenshot ${idx + 1}`}
-                          />
+                        <Carousel.Item key={idx} style={{ height: '320px' }}>
+                          <div style={{ 
+                            height: '320px', 
+                            width: '100%', 
+                            overflow: 'hidden',
+                            borderRadius: '6px'
+                          }}>
+                            <img
+                              src={image}
+                              alt={`${name} screenshot ${idx + 1}`}
+                              style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                              }}
+                            />
+                          </div>
                         </Carousel.Item>
                       ))}
                     </Carousel>
@@ -321,13 +354,13 @@ const Portfolio = () => {
                     </p>
                     <ul className="text-light">
                       {features.map((feature, i) => (
-                        <li key={i}>✔ {feature}</li>
+                        <li key={i}>{feature}</li>
                       ))}
                     </ul>
 
-                    <div className="mt-3">
+                    <div className="mt-3 d-flex align-items-center flex-wrap gap-2">
                       {link && (
-                        <a href={link} className="btn btn-outline-info me-2">
+                        <a href={link} className="btn btn-outline-info">
                           <FaCode className="me-2" /> Code
                         </a>
                       )}
@@ -336,6 +369,7 @@ const Portfolio = () => {
                           <FaEye className="me-2" /> Demo
                         </a>
                       )}
+  
                     </div>
                   </div>
                 </div>
@@ -345,6 +379,7 @@ const Portfolio = () => {
         </div>
       </section>
 
+      
 
       {/* Contact */}
 
@@ -365,17 +400,21 @@ const Portfolio = () => {
           <div className="row g-4">
             <div className="col-md-6 d-flex align-items-stretch">
               <div className="p-4 shadow-lg rounded bg-dark w-100 d-flex flex-column justify-content-center text-center">
-                <div className="mb-4">
+                <div className="mb-4" style={{
+                  width: '150px',
+                  height: '150px',
+                  margin: '0 auto',
+                  borderRadius: '20%',
+                  border: '4px solid #ffc107',
+                  overflow: 'hidden'
+                }}>
                   <img
-                    src="/SanjeevProfile.jpg"
+                    src="/LinkedInProfile1.png"
                     alt="Sanjeev V E"
-                    className="shadow-lg"
                     style={{
-                      width: '150px',
-                      height: '150px',
-                      borderRadius: '50%',
+                      width: '100%',
+                      height: '100%',
                       objectFit: 'cover',
-                      border: '4px solid #ffc107',
                     }}
                   />
                 </div>
@@ -471,7 +510,6 @@ const Portfolio = () => {
         style={{
           backgroundColor: '#0a192f',
           color: '#ffffff',
-
           fontSize: '1rem',
           letterSpacing: '1px',
           position: 'relative',
