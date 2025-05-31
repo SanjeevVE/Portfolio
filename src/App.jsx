@@ -431,7 +431,7 @@ const Portfolio = () => {
 
                 <div className="mt-4">
                   <a
-                    href="https://drive.google.com/file/d/1X_wWgIqw2b5Fr29_cIDhWn6YJ8PU_xKq/view?usp=sharing"
+                    href="https://drive.google.https://drive.google.com/file/d/1-hz6QCoiu3MLE1LCIRW5mWZyqt8gbuL3/view?usp=sharing/file/d/1X_wWgIqw2b5Fr29_cIDhWn6YJ8PU_xKq/view?usp=sharing"
                     className="btn btn-warning px-4 py-2"
                   >
                     📄 Download Resume
