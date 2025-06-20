@@ -121,6 +121,42 @@ const projects = [
     link: 'https://github.com/SanjeevVE/Fast-Certify',
     demo: 'https://fast-certify.netlify.app/'
   },
+  {
+    name: 'QR Code Generator',
+    description:
+      'A simple and fast web app to generate QR codes for any text or URL. Enter your content, generate a QR code instantly, and download it with a custom title. No expiry, no hassle.',
+    technologies: 'React, Vite, HTML5, CSS3',
+    features: [
+      'Instant QR code generation',
+      'Downloadable QR codes with custom titles',
+      'No expiry on generated codes',
+      'Responsive and user-friendly interface',
+    ],
+    images: [
+      'https://i.ibb.co/6b8Qw7d/qr-code-gen-1.png', // Placeholder, replace with actual screenshot if available
+      'https://i.ibb.co/6b8Qw7d/qr-code-gen-2.png', // Placeholder
+    ],
+    link: 'https://github.com/SanjeevVE/instant-qr', // Replace with actual repo if available
+    demo: 'https://getinstantqr.netlify.app/'
+  },
+  {
+    name: 'Decadent Brownies',
+    description:
+      'A premium online bakery website for Decadent Brownies, featuring a beautiful showcase of handcrafted brownies and banana cakes. Includes product listings, customer testimonials, and easy contact/order options.',
+    technologies: 'Next.js, React, Vercel, HTML5, CSS3',
+    features: [
+      'Product showcase with images and descriptions',
+      'Customer testimonials and reviews',
+      'Contact and order forms',
+      'Responsive design for all devices',
+    ],
+    images: [
+      'https://i.ibb.co/3kQw7dB/decadent-brownies-1.png', // Placeholder, replace with actual screenshot if available
+      'https://i.ibb.co/3kQw7dB/decadent-brownies-2.png', // Placeholder
+    ],
+    link: 'https://github.com/SanjeevVE/decadent-brownies', // Replace with actual repo if available
+    demo: 'https://decadentbrownies.vercel.app/'
+  },
 ];
 
 const Portfolio = () => {
